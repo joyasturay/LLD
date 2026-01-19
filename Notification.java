@@ -25,7 +25,7 @@ class Email implements NotificationChannel {
 }
 
 class Sms implements NotificationChannel {
-   private String message;
+    private String message;
     private String recipient;
 
     public Sms(String message, String recipient) {
@@ -36,6 +36,21 @@ class Sms implements NotificationChannel {
     public void send() {
         System.out.println("Connecting to Telecom gateway...");
         System.out.println("📱 Sending SMS to " + recipient + ": " + message);
+    }
+}
+
+class WhatsApp implements NotificationChannel {
+    private String message;
+    private String recipient;
+
+    public WhatsApp(String message, String recipient) {
+        this.message = message;
+        this.recipient = recipient;
+    }
+
+    public void send() {
+         System.out.println("Connecting to WhatsApp gateway...");
+        System.out.println("📱 Sending message to " + recipient + ": " + message);
     }
 }
 
