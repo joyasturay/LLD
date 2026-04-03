@@ -1,0 +1,3 @@
+Hello World
+Image: logo.png
+This is a document editor.
